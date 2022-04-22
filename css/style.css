@@ -61,6 +61,8 @@ li{
     padding: 5px;
     border-radius: 10px;
     position: relative;
+    right: 0;
+    left: 0;
 }
 
 p{
@@ -113,14 +115,27 @@ i{
 }
 
 .done{
-    animation-name: entrata;
-    animation-duration: 1s;
     background-color: rgb(57, 196, 220);
 }
 
-@keyframes entrata {
+.abbiamo-fatto .done{
+    animation-name: entrata-uno;
+    animation-duration: 1s;
+}
+
+@keyframes entrata-uno {
     from {right: 800px;}
     to {right: 0;}    
+}
+
+.facciamo .done{
+    animation-name: entrata-due;
+    animation-duration: 1s;
+}
+
+@keyframes entrata-due {
+    from {left: 800px;}
+    to {left: 0;}    
 }
 
 .add{

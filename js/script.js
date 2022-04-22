@@ -41,7 +41,8 @@ const container = new Vue({
         ],
         fatto: [],
         compito: '',
-        ora: ''
+        ora: '',
+        flag: false
     },
     methods: {
         deletedOne(index){
@@ -51,23 +52,29 @@ const container = new Vue({
             this.fatto.splice(index, index + 1)
         },
         checkedOne(index){
-            this.toDo[index].check = true
-            console.log(this.toDo[index].check)
-            setTimeout(() =>{
+            if(this.flag == false){
+                this.flag = true
+                this.toDo[index].check = true
+                setTimeout(() =>{
                 this.toDo[index].check = false
-                console.log(this.toDo[index].check)
                 this.fatto.push(this.toDo[index])
                 this.toDo.splice(index, 1) 
-            }, 1500)
+                this.flag = false
+                }, 1500)
+            }
         },
         checkedTwo(index){
-            this.fatto[index].check = true
-            setTimeout(()=>{
+            if(this.flag == false){
+                this.flag = true
+                this.fatto[index].check = true
+                setTimeout(()=>{
                 this.fatto[index].check = false
                 this.toDo.push(this.fatto[index])
                 this.fatto.splice(index, 1)
                 console.log(this.check)
-            }, 1500)
+                this.flag = false
+                }, 1500)
+            }
         },
         aggiungi(){
             if(this.compito == '' || this.ora == ''){
