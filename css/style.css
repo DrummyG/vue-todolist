@@ -102,18 +102,6 @@ i{
     color: rgb(25, 123, 25);
 }
 
-.add{
-    margin: 10px auto;
-    width: 400px;
-}
-
-button{
-    background-color: rgb(105, 105, 228);
-    border: 5px solid rgb(105, 105, 228);
-    border-radius: 5px;
-    color: white;
-}
-
 .move-one{
     margin-left: 1000px;
     transition: all 3s;
@@ -128,4 +116,25 @@ button{
 @keyframes entrata {
     from {right: 800px;}
     to {right: 0;}    
+}
+
+.add{
+    margin: 10px auto;
+    width: 400px;
+}
+
+button{
+    background-color: rgb(105, 105, 228);
+    border: 5px solid rgb(105, 105, 228);
+    border-radius: 5px;
+    color: white;
+}
+
+input{
+    border: 0px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(189, 189, 243);
+    color: white;
 }
