@@ -52,10 +52,12 @@ const container = new Vue({
         },
         checkedOne(index){
             this.toDo[index].check = true
+            console.log(this.toDo[index].check)
             setTimeout(() =>{
                 this.toDo[index].check = false
+                console.log(this.toDo[index].check)
                 this.fatto.push(this.toDo[index])
-                this.toDo.splice(index, index + 1) 
+                this.toDo.splice(index, 1) 
             }, 1500)
         },
         checkedTwo(index){
@@ -63,7 +65,8 @@ const container = new Vue({
             setTimeout(()=>{
                 this.fatto[index].check = false
                 this.toDo.push(this.fatto[index])
-                this.fatto.splice(index, index + 1)
+                this.fatto.splice(index, 1)
+                console.log(this.check)
             }, 1500)
         },
         aggiungi(){

@@ -19,7 +19,7 @@
         <div class="box">
             <div class="fare">
                 <p v-if="toDo.length === 0" class="void">Non hai cose da fare</p>
-                <ul>
+                <ul class="facciamo">
                     <li v-for="(cosa, index) in toDo" :class="toDo[index].check == true ? 'move-one': ''" class="done">
                         <p>{{cosa.cosa}}</p>
                         <span class="middle">{{cosa.quando}}</span>
@@ -32,8 +32,8 @@
             </div>
             <div class="fatto">
                 <p v-if="fatto.length === 0" class="void">Devi fare cosa</p>
-                <ul>
-                    <li v-for="(cosa, index) in fatto" :class="fatto[index].check == true ? 'move-one': ''" class="done">
+                <ul class="abbiamo-fatto">
+                    <li v-for="(cosa, index) in fatto" :class="fatto[index].check == true ? 'move-two': ''" class="done">
                         <i class="fa-solid fa-square-caret-left" @click="checkedTwo(index)"></i> 
                         <p>
                             {{cosa.cosa}} </p>

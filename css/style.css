@@ -107,6 +107,11 @@ i{
     transition: all 3s;
 }
 
+.move-two{
+    margin-right: 1000px;
+    transition: all 3s;
+}
+
 .done{
     animation-name: entrata;
     animation-duration: 1s;
